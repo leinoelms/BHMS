@@ -1,0 +1,30 @@
+.card-title{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.more-info{
+  padding: 5px;
+  background: #ff7944
+}
+.more-info:hover{
+  z-index: 1;
+  background-color: #F5703A;
+}
+
+ion-card{
+  width: 300px;
+}
+ion-col{
+  display: flex;
+  justify-content: center;
+}
+
+.back-image{
+  position: absolute;
+  z-index: -2;
+  transform: scale(8);
+  top: 35%;
+  opacity: 30%;
+  color: white;
+}
