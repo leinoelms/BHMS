@@ -1,4 +1,5 @@
-<ion-menu contentId="main-content">
+<!-- 
+<ion-menu contentId="main-content" persistent="true">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-title>Menu</ion-title>
@@ -28,11 +29,9 @@
       </ion-item>
     </ion-list>
   </ion-content>
-</ion-menu>
+</ion-menu> -->
 
-
-
-<ion-content class="ion-page" id="main-content">
+<!-- <ion-content class="ion-page" id="main-content">
   <ion-header [translucent]="true" >
     <ion-toolbar color="primary">
       <ion-title>Dashboard</ion-title>
@@ -129,7 +128,145 @@
       </ion-col>
     </ion-row> -->
 
-  </ion-grid>
+  <!-- </ion-grid>
 
   
-</ion-content>
+</ion-content>  -->
+<ion-split-pane when="md" contentId="main-content">
+  <!-- Left-side pane content -->
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="analytics" slot="start"></ion-icon>
+          <ion-label>Dashboard</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="people" slot="start"></ion-icon>
+          <ion-label>Tenants Profile</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="home" slot="start"></ion-icon>
+          <ion-label>Room Manangement</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bed" slot="start"></ion-icon>
+          <ion-label>Room Manangement</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bed" slot="start"></ion-icon>
+          <ion-label>Bed Assignment</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Main content -->
+  <div class="ion-page" id="main-content">
+
+    <ion-header [translucent]="true" >
+      <ion-toolbar color="primary">
+        <ion-title>Dashboard</ion-title>
+         <ion-menu-toggle slot="start" >
+          <ion-button>
+            <ion-icon name="menu"></ion-icon>
+          </ion-button>
+        </ion-menu-toggle>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content >  
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col>
+            <ion-card style="text-align: center;" color="primary">
+              <ion-icon name="people-outline" class="back-image"></ion-icon>
+              <ion-card-header>
+                <ion-card-title class="card-title">100</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="card-content">
+                Number of Tenants
+              </ion-card-content>
+              <div class="more-info" style="display: flex; justify-content: center; align-items: center;">
+                More Info
+                <ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card style="text-align: center;" color="primary">
+              <ion-icon style="margin-left: -5px;" name="home-outline" class="back-image"></ion-icon>
+              <ion-card-header>
+                <ion-card-title class="card-title">100</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="card-content">
+                Number of Rooms
+              </ion-card-content>
+              <div class="more-info" style="display: flex; justify-content: center; align-items: center;">
+                More Info
+                <ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card style="text-align: center;" color="primary">
+              <ion-icon style="margin-left: -5px;" name="bed-outline" class="back-image"></ion-icon>
+              <ion-card-header>
+                <ion-card-title class="card-title">100</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="card-content">
+                Number of Bed
+              </ion-card-content>
+              <div class="more-info" style="display: flex; justify-content: center; align-items: center;">
+                More Info
+                <ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+    
+        <!-- <ion-row>
+          <ion-col>
+            <ion-card style="text-align: center;" color="primary">
+              <ion-card-header>
+                <ion-card-title class="card-title">100</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="card-content">
+                Number of Tenants
+              </ion-card-content>
+              <div class="more-info" style="display: flex; justify-content: center; align-items: center;">
+                More Info
+                <ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col>
+            <ion-card style="text-align: center;" color="primary">
+              <ion-card-header>
+                <ion-card-title class="card-title">100</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="card-content">
+                Number of Tenants
+              </ion-card-content>
+              <div class="more-info" style="display: flex; justify-content: center; align-items: center;">
+                More Info
+                <ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row> -->
+    
+      </ion-grid>
+  
+    </ion-content>
+  </div>
+ 
+</ion-split-pane>
